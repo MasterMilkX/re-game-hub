@@ -1,0 +1,80 @@
+/* import the FSEX300 font */
+@font-face {
+    font-family: 'Fixedsys';
+    src: url('FSEX300.ttf');
+}
+:root{
+    --main-color:#0084ff;
+}
+
+body{
+    background-color:var(--main-color);
+    color:white;
+    font-family: 'Fixedsys';
+}
+a{
+    color:rgb(184, 184, 184);
+}
+#container{
+    width:720px;
+    margin:30px auto;
+    text-align: center;
+    /* border:1px solid black; */
+}
+#hub-title{
+    font-size:40px;
+    font-weight:bold;
+    margin:10px auto 100px auto;
+    border:3px solid white;
+    padding:4px;
+    background-color: white;
+    color:var(--main-color);
+}
+#game-row{
+    width:720px;
+    display:flex;
+}
+.game-pick{
+    border:5px solid #00000000;
+    padding:20px;
+    width:180px;
+    margin:auto;
+    float:left;
+}
+.game-pick:hover{
+    border:5px solid white;
+    cursor: pointer;
+}
+.game-title{
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:30px;
+    width:100%;
+}
+.game-icon img{
+    width:150px;
+    height:150px;
+    margin:auto;
+}
+#footer{
+    text-align: center;
+    /* border:1px solid red; */
+    margin-top:100px;
+    margin-bottom:30px;
+    display:flex;
+}
+.foot-item{
+    margin:auto;
+    width:100px;
+    font-size:20px;
+    padding:2px 10px;
+    border:2px solid #00000000;
+    /* width:50%; */
+}
+.foot-item:hover{
+    border:2px solid white;
+    cursor: pointer;
+    background-color: white;
+    color:var(--main-color);
+    font-weight: bold;
+}
