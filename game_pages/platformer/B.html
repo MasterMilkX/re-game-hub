@@ -13,7 +13,7 @@
             s.innerHTML = null;
             document.getElementsByTagName("head")[0].appendChild(s);
         </script>
-
+        <script src="../../utils.js"></script>
 
         <title>RE:Game Design - Game Page Template</title>
         <meta charset="utf-8">
@@ -69,7 +69,8 @@
                 <canvas id="unity-canvas" width=576 height=480 style="width: 576px; height: 480px; background: #231F20"></canvas>
             </div>
             <div id="game-instructions">
-                [A] - Move Left | [W] - Jump | [D] - Move Right
+                [A] Move Left | [W] Jump / Float | [D] Move Right <br>
+                [Q] Shrink | [E] Grow | [R] Reset Game
             </div>
 
             <div id="footer">
@@ -108,49 +109,12 @@
         </script>
 
 
-        <!-- SCRIPTS FOR SHOWING ARROWS -->
-        <script>
-            // set up the arrows to change the game 
-            function setup(){
-                document.getElementById("game-genre").innerHTML = GAME_GENRE.toUpperCase();
-                document.getElementById("game-letter").innerHTML = GAME_LETTER;
-                
-                // Game A
-                if(GAME_LETTER == "A"){
-                    document.getElementById("game-left").innerHTML = "";
-                    document.getElementById("game-right").onclick = function(){
-                        gotoLink("B.html");
-                    }
-                }
-                // Game B
-                else if(GAME_LETTER == "B"){
-                    document.getElementById("game-left").onclick = function(){
-                        gotoLink("A.html");
-                    }
-                    document.getElementById("game-right").onclick = function(){
-                        gotoLink("C.html");
-                    }
-                }
-                // Game C
-                else if(GAME_LETTER == "C"){
-                    document.getElementById("game-right").innerHTML = "";
-                    document.getElementById("game-left").onclick = function(){
-                        gotoLink("B.html");
-                    }
-                }
-            }
-
-        </script>
-
         <script>
             // initialization function
             function INIT(){
                 setup();
                 importUnity();
-            }
-            // goes to the link specified (either in a new window or not)
-            function gotoLink(link,new_window=false){
-                window.open(link,new_window?'_blank':'_self');
+                flashButton(document.getElementById("game-right"));
             }
         </script>
 
