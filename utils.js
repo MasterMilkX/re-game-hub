@@ -1,6 +1,6 @@
 // flashes a button after a certain amount of time to get the user's attention
 let bct = 0;
-function flashButton(btn_el,flash_countdown=120,flash_time=1,flash_color='#ff0000'){
+function flashButton(btn_el,flash_countdown=120,flash_time=1,flash_color='#F47700'){
     setTimeout(function(){
         bct = 0;
         setInterval(function(){
