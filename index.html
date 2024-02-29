@@ -20,7 +20,16 @@
             }
         }
     </script>
-
+    <script>
+        function download(url) {
+            const a = document.createElement('a')
+            a.href = url
+            a.download = url.split('/').pop()
+            document.body.appendChild(a)
+            a.click()
+            document.body.removeChild(a)
+        }
+    </script>
 
 </head>
 <body onload="showTodo()">
@@ -41,7 +50,7 @@
             </div>
         </div>
         <div id="footer">
-            <div class="foot-item" onclick="gotoLink('https://forms.gle/G9vE4AJTqWKUzMwj8',true)">FORM</div>
+            <div class="foot-item" onclick="download('ink_splotch_2_column.pdf')">PAPER</div>
             <div class="foot-item" onclick="gotoLink('about.html')">ABOUT</div>
         </div>
         <a href="https://www.flaticon.com/free-icons/" title="space shuttle icons">Icons created by Freepik - Flaticon</a>

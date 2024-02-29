@@ -43,6 +43,16 @@
             }
         </style>
         <link rel="stylesheet" href="styles.css">
+        <script>
+            function download(url) {
+                const a = document.createElement('a')
+                a.href = url
+                a.download = url.split('/').pop()
+                document.body.appendChild(a)
+                a.click()
+                document.body.removeChild(a)
+            }
+        </script>
     </head>
     <body>
         <div id="container">
@@ -53,18 +63,20 @@
                 <br><br>
                 This is a user study intended to evaluate the cohesiveness, uniqueness, and game feel of the resulting LLM co-designed games against pure human-made games. The results of this study will be used to inform the design of future LLMs and to help game designers understand the potential and limitations of LLMs in the game design process.
                 <br><br>
+                You can read the paper for this experiment <a href="ink_splotch_2_column.pdf">here</a>. This was accepted to the 2024 Foundation on Digital Games conference.
             </div>
             <div id="authors">
                 <div id="author-title">Authors</div>
                 <div id="author-row">
                     <div class="author-img" onclick="gotoLink('https://asadanjumportfolio.wordpress.com/')"><img src='imgs/authors/asadanjum.png'><div class='author-name'>Asad Anjum</div></div>
                     <div class="author-img" onclick="gotoLink('')"><img src='imgs/authors/justinli.png'><div class='author-name'>Justin Li</div></div>
+                    <div class="author-img" onclick="gotoLink('https://www.linkedin.com/in/noelle-law/')"><img src='imgs/authors/noellelaw.png'><div class='author-name'>Noelle Law</div></div>
                     <div class="author-img" onclick="gotoLink('https://mastermilkx.github.io/',true)"><img src='imgs/authors/mcharity.png'><div class='author-name'>M Charity</div></div>
                     <div class="author-img" onclick="gotoLink('http://julian.togelius.com/',true)"><img src='imgs/authors/juliantogelius.jpeg'><div class='author-name'>Julian Togelius</div></div>
                 </div>
             </div>
             <div id="footer">
-                <div class="foot-item" onclick="gotoLink('https://forms.gle/G9vE4AJTqWKUzMwj8',true)">FORM</div>
+                <div class="foot-item" onclick="download('ink_splotch_2_column.pdf')">PAPER</div>
                 <div class="foot-item" onclick="gotoLink('index.html')">HOME</div>
             </div>
         </div>
