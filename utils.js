@@ -19,7 +19,7 @@ function gotoLink(link,new_window=false){
 // set up the arrows to change the game 
 function setup(){
     document.getElementById("game-genre").innerHTML = GAME_GENRE.toUpperCase();
-    document.getElementById("game-letter").innerHTML = GAME_LETTER;
+    // document.getElementById("game-letter").innerHTML = GAME_LETTER;
     
     // Game A
     if(GAME_LETTER == "A"){

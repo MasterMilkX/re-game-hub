@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="utils.js"></script>
+
+    <script>
+        TODO_GAME = "roguelike";
+        
+        function showTodo(){
+            // visited before so don't flash the game
+            if(localStorage.getItem('was_visited')){
+                return;
+            
+            // never visited, so flash the game
+            }else{
+                localStorage.setItem('was_visited', 1);
+                var todo_btn = document.getElementById(TODO_GAME + "-btn");
+                flashButton(todo_btn,0.1,0.5);
+            }
+        }
+    </script>
+    <script>
+        function download(url) {
+            const a = document.createElement('a')
+            a.href = url
+            a.download = url.split('/').pop()
+            document.body.appendChild(a)
+            a.click()
+            document.body.removeChild(a)
+        }
+    </script>
+
+</head>
+<body onload="showTodo()">
+    <div id="container">
+        <div id="hub-title">Ink Splotch - Game Hub</div>
+        <div id="game-row">
+            <div class="game-pick" onclick="gotoLink('game_pages/space_shooter/A.html')" id="space_shooter-btn">
+                <div class="game-title">Space Shooter</div>
+                <div class="game-icon"><img src='imgs/space_shoot.png'></div>
+            </div>
+            <div class="game-pick" onclick="gotoLink('game_pages/platformer/A.html')" id="platformer-btn">
+                <div class="game-title">Platformer</div>
+                <div class="game-icon"><img src='imgs/platformer2.png'></div>
+            </div>
+            <div class="game-pick" onclick="gotoLink('game_pages/roguelike/A.html')" id="roguelike-btn">
+                <div class="game-title">Rogue-like</div>
+                <div class="game-icon"><img src='imgs/dungeon.png'></div>
+            </div>
+        </div>
+        <div id="footer">
+            <!-- <div class="foot-item" onclick="download('ink_splotch_2_column.pdf')">PAPER</div> -->
+            <div class="foot-item" onclick="gotoLink('https://arxiv.org/abs/2403.02454')">PAPER</div>
+            <div class="foot-item" onclick="gotoLink('about.html')">ABOUT</div>
+        </div>
+        <a href="https://www.flaticon.com/free-icons/" title="space shuttle icons">Icons created by Freepik - Flaticon</a>
+    </div>
+
+    <script>
+        // goes to the link specified (either in a new window or not)
+        function gotoLink(link,new_window=false){
+            window.open(link,new_window?'_blank':'_self');
+        }
+    </script>
+</body>
+</html>
