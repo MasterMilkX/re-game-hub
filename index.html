@@ -34,41 +34,27 @@
 </head>
 <body onload="showTodo()">
     <div id="container">
-        <!-- title -->
         <div id="hub-title">Ink Splotch - Game Hub</div>
-        <!-- list -->
-        <div id="game-hub">
-            <div id="row-title">
-                <div class="game-genre" style="margin-left:100px;">Space Shooter</div>
-                <div class="game-genre">Platformer</div>
-                <div class="game-genre">Roguelike</div>
+        <div id="game-row">
+            <div class="game-pick" onclick="gotoLink('game_pages/space_shooter/A.html')" id="space_shooter-btn">
+                <div class="game-title">Space Shooter</div>
+                <div class="game-icon"><img src='imgs/space_shoot.png'></div>
             </div>
-            <div class="row-set">
-                <div class="game-made-label">Base</div>
-                <div class="game-set-icon" onclick="gotoLink('game_pages/space_shooter/A.html')"><img src='imgs/space_shoot.png'><div class="game_let">A</div></div>
-                <div class="game-set-icon" onclick="gotoLink('game_pages/platformer/C.html')"><img src='imgs/platformer2.png'><div class="game_let">C</div></div>
-                <div class="game-set-icon" onclick="gotoLink('game_pages/roguelike/B.html')"><img src='imgs/dungeon.png'><div class="game_let">B</div></div>
+            <div class="game-pick" onclick="gotoLink('game_pages/platformer/A.html')" id="platformer-btn">
+                <div class="game-title">Platformer</div>
+                <div class="game-icon"><img src='imgs/platformer2.png'></div>
             </div>
-            <div class="row-set">
-                <div class="game-made-label">Human</div>
-                <div class="game-set-icon" onclick="gotoLink('game_pages/space_shooter/C.html')"><img src='imgs/space_shoot.png'><div class="game_let">C</div></div>
-                <div class="game-set-icon" onclick="gotoLink('game_pages/platformer/B.html')"><img src='imgs/platformer2.png'><div class="game_let">B</div></div>
-                <div class="game-set-icon" onclick="gotoLink('game_pages/roguelike/A.html')"><img src='imgs/dungeon.png'><div class="game_let">A</div></div>
-            </div>
-            <div class="row-set">
-                <div class="game-made-label">ChatGPT</div>
-                <div class="game-set-icon" onclick="gotoLink('game_pages/space_shooter/B.html')"><img src='imgs/space_shoot.png'><div class="game_let">B</div></div>
-                <div class="game-set-icon" onclick="gotoLink('game_pages/platformer/A.html')"><img src='imgs/platformer2.png'><div class="game_let">A</div></div>
-                <div class="game-set-icon" onclick="gotoLink('game_pages/roguelike/C.html')"><img src='imgs/dungeon.png'><div class="game_let">C</div></div>
+            <div class="game-pick" onclick="gotoLink('game_pages/roguelike/A.html')" id="roguelike-btn">
+                <div class="game-title">Rogue-like</div>
+                <div class="game-icon"><img src='imgs/dungeon.png'></div>
             </div>
         </div>
-        <!-- footer -->
-        <div id="footer" style="margin-top:30px">
+        <div id="footer">
             <!-- <div class="foot-item" onclick="download('ink_splotch_2_column.pdf')">PAPER</div> -->
-            <div class="foot-item" onclick="gotoLink('https://arxiv.org/abs/2403.02454', true)">PAPER</div>
+            <div class="foot-item" onclick="gotoLink('https://arxiv.org/abs/2403.02454')">PAPER</div>
             <div class="foot-item" onclick="gotoLink('about.html')">ABOUT</div>
         </div>
-        <a href="https://www.flaticon.com/free-icons/" title="all icons" style="margin-top:50px;">Icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/" title="space shuttle icons">Icons created by Freepik - Flaticon</a>
     </div>
 
     <script>
